@@ -4,7 +4,7 @@ bagels is a deductive logic game. (deductive meaning: "the deriving of a conclus
 
 import random
 num_digit = 3
-max_guess = 10
+max_guess = 20
 
 #How to play
 how_to_play = (f"""welcome to Bagels is a deductive logic game by PAL.
