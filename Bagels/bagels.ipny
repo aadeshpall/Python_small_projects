@@ -34,7 +34,7 @@ def main():
             secret_num = get_secret_num()
 
             guess_count = 0
-            while guess_count <= max_guess:
+            while guess_count <= max_guess-1:
                 guess = ''
                 while len(guess) != num_digit or not guess.isdecimal:
                     guess = input(f"Guess #{guess_count}:\n> ")
@@ -53,10 +53,6 @@ def main():
             if not input('> ').lower().startswith('y'):
                 break
         print('Thanks for playing!')
-
-
-        
-
 
 
 def get_secret_num():
@@ -83,8 +79,6 @@ def get_clues(guess, secret_num):
     else:
         clues.sort()
         return ''.join(clues)
-    
-
 
 main()
 
