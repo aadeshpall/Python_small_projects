@@ -1,16 +1,23 @@
 """
 bagels is a deductive logic game. (deductive meaning: "the deriving of a conclusion by reasoning")
 """
+
+import random
+num_digit = 3
+max_guess = 10
+
 #How to play
-"""
-In this game you must guess a secret three-digit number based on clues(wiht no repeated digit).
+how_to_play = (f"""welcome to Bagels is a deductive logic game by PAL.
+In this game you must guess a secret {num_digit} digit number(with no repeated digit) based on clues.
 
 The game offers one of the following hints in response to your guess: 
-1: “Pico” when your guess has a correct digit in the wrong place.
-2: “Fermi” when your guess has a correct digit in the correct place.
-3: “Bagels” if your guess has no correct digits. 
+1: "Pico" when your guess has a (correct digit in the wrong place).
+2: "Fermi" when your guess has a (correct digit in the correct place).
+3: "Bagels" if your guess has (no correct digits). 
+You have 10 tries to guess the secret number.
 
-You have 10 tries to guess the secret number."""
+For example, if the secret number was 248 and your guess was 843, the
+clues would be Fermi Pico.""")
 ex = """
 for example:
 Guess #1:           
@@ -34,24 +41,8 @@ Guess #5:
 You got it!"""
 
 
-import random
-
-num_digit = 3
-max_guess = 10
-
-
 def main():
-    print(f"""welcome to Bagels is a deductive logic game by PAL.
-In this game you must guess a secret {num_digit} digit number(with no repeated digit) based on clues.
-
-The game offers one of the following hints in response to your guess: 
-1: "Pico" when your guess has a (correct digit in the wrong place).
-2: "Fermi" when your guess has a (correct digit in the correct place).
-3: "Bagels" if your guess has (no correct digits). 
-You have 10 tries to guess the secret number.
-
-For example, if the secret number was 248 and your guess was 843, the
-clues would be Fermi Pico.""")
+    print(how_to_play)
     start = input("IF you are ready to play type start,\nOR For more examples to understand the game type examples: ")
 
     if start.lower() == "example":
